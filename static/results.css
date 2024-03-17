@@ -1,0 +1,32 @@
+p {
+    font-family: "Avenir";
+    font-size: 20px;
+}
+
+#Incorrect {
+    background-color: lightcoral;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px 30px;
+    width: 40%;
+}
+
+#Guess {
+    color: red;
+    margin-top: -10px;
+}
+
+#Correct {
+    background-color: lightgreen;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px 30px;
+    width: 40%;
+}
+
+#Album_cover {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    width: 20%;
+}

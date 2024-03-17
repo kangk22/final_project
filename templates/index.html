@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Start page</title>
+    </head>
+    <body>
+        <h2>
+            Think you're a fan of a music artist? Play this game to find out!
+        </h2>
+        <br>
+        <div id="Instructions">
+        <h4 style="margin-top: 20px; margin-bottom: -10px">
+            How to play:
+        </h4>
+        <ul>
+            <li>Enter the name of a music artist in the box below</li>
+            <li>A song by that artist will be chosen at random, and a 30 second audio track will appear</li>
+            <li>If no audio is available, the song title will be provided instead</li>
+            <li>Chose the album that you think the song comes from</li>
+            <li>Good luck and have fun!</li>
+        </ul>
+        </div>
+        <br>
+        <div align="Center">
+        <form action='/question' method="post">
+            <h4>
+                <label for="artist_search">Choose an artist:</label><br>
+                <input type="text" id="artist_search" name="artist_search" required>
+            </h4>
+            <p>
+                <input type="submit" value="Create Game">
+            </p>
+        </form>
+        </div>
+    </body>
+</html>
+{% endblock %}

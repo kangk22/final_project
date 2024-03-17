@@ -1,0 +1,60 @@
+h1 {
+    text-align: center;
+    font-family: "Avenir";
+}
+
+h2 {
+    text-align: center;
+    font-family: "Avenir";
+    font-size: 30px;
+}
+
+h3 {
+    font-family: "Avenir";
+    font-size: 25px;
+}
+
+h4 {
+    font-family: "Avenir";
+    font-size: 20px;
+}
+
+ul {
+    font-family: "Avenir";
+    font-size: 16px;
+    line-height: 200%;
+}
+
+input[type=text] {
+    font-family: "Avenir";
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 4px 0;
+    padding: 8px 16px;
+    width: 20%;
+}
+
+input[type=submit] {
+    font-family: "Avenir";
+    font-size: 20px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 16px;
+}
+
+footer {
+    text-align: center;
+}
+
+#Instructions {
+    background-color: rgb(212,235,242);
+    color: royalblue;
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px 30px;
+    width: 50%;
+}

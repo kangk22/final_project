@@ -1,0 +1,36 @@
+#Random_song {
+    background-color: lightyellow;
+    border-style: double;
+    border-width: 5px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 8px 16px;
+    width: 50%;
+}
+
+#Song_title {
+    font-size: 35px;
+    margin-top: -10px;
+}
+
+#Audio {
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 40%;
+}
+
+#Options {
+    margin-left: 100px;
+}
+
+#Option {
+    font-family: "Avenir";
+    font-size: 20px;
+}
+
+#Album_cover {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    width: 10%;
+}

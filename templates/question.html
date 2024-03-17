@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Question page</title>
+        <link href="/static/question.css" rel="stylesheet">
+    </head>
+    <body>
+        <div align="Center" id="Random_song">
+        <h3 style="font-weight:normal">Chosen artist: {{ artist }}</h3>
+        {% if audio == None %}
+            <h1 id="Song_title">"{{ song }}"</h1>
+        {% else %}
+            <audio controls id="Audio">
+                <p> {{ audio }}</p>
+                <source src="{{ audio }}"/>
+            </audio>
+        {% endif %}
+        </div>
+
+        <div id="Options">
+        <form action='/results' method="post">
+            <h3>Which album is the song from?</h3>
+            {% for album in albums %}
+                <label id="Option" for="{{ album }}">
+                <img id="Album_cover" src="{{ album['images'][0]['url'] }}"/>
+                <input type="radio" id="{{ album }}" name="album" value="{{ album['id'] }}" required>
+                {{ album['name'] }}<br></label>
+            {% endfor %}
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+        </div>
+    </body>
+</html>
+{% endblock %}

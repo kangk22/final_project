@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Results page</title>
+        <link href="/static/results.css" rel="stylesheet">
+    </head>
+    <body>
+        <div align="Center">
+        {% if correct == False %}
+            <h2 id="Incorrect">Wrong answer! Better luck next time.</h2>
+            <p>The song was <b>{{ song_name }}</b></p>
+            <img id="Album_cover" src="{{ album_cover }}"/>
+            <p>From the album <b>{{ song_album }}</b></p>
+            <p id="Guess"><em>You guessed: {{ guessed_album }}</em></p>
+        {% else %}
+            <h2 id="Correct">Congrats! You guessed the right album.</h2>
+            <p>The song was <b>{{ song_name }}</b></p>
+            <img id="Album_cover" src="{{ guessed_album_cover }}"/>
+            <p>From the album <b>{{ guessed_album }}</b></p>
+        {% endif %}
+
+        <h3 style="margin-top: 30px; margin-bottom: -10px">Play again?</h3>
+        <form action='/question' method="post">
+            <h4>
+                <label for="artist_search">Choose an artist:</label><br>
+                <input type="text" id="artist_search" name="artist_search" required>
+            </h4>
+            <p>
+                <input type="submit" value="Create Game">
+            </p>
+        </form>
+        </div>
+    </body>
+</html>
+{% endblock %}
